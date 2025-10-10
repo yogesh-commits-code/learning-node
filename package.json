@@ -1,0 +1,16 @@
+{
+  "name": "node_davegray",
+  "version": "1.0.0",
+  "description": "Just a node tutorial",
+  "license": "ISC",
+  "author": "Yogesh",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "uuid": "^13.0.0"
+  }
+}
