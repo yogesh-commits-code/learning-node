@@ -3,3 +3,4 @@
 2025-10-10	21:50:45	dca1d017-9b06-4c47-a1d5-b4bab868d36d	log event emitted!
 2025-10-10	21:51:04	7c948d80-6145-43ba-9c52-b39feb244a58	log event emitted!
 2025-10-10	21:51:15	1ec8de6f-a622-440f-9fd5-e55e9cd9cc2a	log event emitted!
+2025-10-12	02:06:54	73558155-6ce6-4e4a-9cfd-aae2a64972b5	/subDir/index	GET2025-10-12	02:06:54	edf5d2d7-0364-467c-83ae-f4227d914535	/favicon.ico	GET2025-10-12	02:07:05	7f8e9f09-9998-42ea-a54f-bd060ab4db6f	/ur	GET2025-10-12	02:10:06	6a39ed3c-f968-4e2b-b2f1-0e6f8055a3ba	/ur	GET
