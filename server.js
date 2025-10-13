@@ -2,6 +2,18 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 3000;
+
+// bulit -in middleware to handle urlencoded data
+// in other words, form data:
+// 'content-type : application/x-www-form-urlencoded'
+app.use(express.urlencoded({ extended: false }));
+
+// bulit-in middleware for json
+app.use(express.json());
+
+// serve static file
+app.use(express.static(path.join(__dirname, '/public')));
+
 app.use((req, res, next) => {
 	console.log(`${req.method} ${req.path}`);
 	next();
@@ -23,6 +35,8 @@ app.get(
 		res.send('Hello, World');
 	}
 );
+
+// chaining route handler
 let one = (req, res, next) => {
 	console.log('One');
 	next();
@@ -38,6 +52,7 @@ let three = (req, res) => {
 	res.send('Finished');
 };
 app.get(/\/chain(.html)?/, [one, two, three]);
+
 app.get('/old-page.html', (req, res) => {
 	res.redirect(301, '/new-page.html'); // 302 by default
 });
