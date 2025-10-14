@@ -1,1 +1,4 @@
 2025-10-12	13:26:44	ba539dd8-b543-45a9-a860-1d2c573cd0b8	ReferenceError	fiePath is not defined
+2025-10-14	19:34:36	7571c216-293a-4d09-9b83-1039644df7f9	Error: not allowed by CORS
+2025-10-14	19:35:50	4d14d6c9-9c4e-455f-8e93-2ddea5e5fc7e	Error: not allowed by CORS
+2025-10-14	19:44:59	bdf19565-7b86-4b96-8a85-b58c746acd84	Error: not allowed by CORS
