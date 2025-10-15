@@ -2,3 +2,11 @@
 2025-10-14	19:34:36	7571c216-293a-4d09-9b83-1039644df7f9	Error: not allowed by CORS
 2025-10-14	19:35:50	4d14d6c9-9c4e-455f-8e93-2ddea5e5fc7e	Error: not allowed by CORS
 2025-10-14	19:44:59	bdf19565-7b86-4b96-8a85-b58c746acd84	Error: not allowed by CORS
+2025-10-15	22:16:56	ebbe54b1-d2ef-471a-93b6-723a0dfbd111	TypeError: Cannot read properties of undefined (reading 'firstname')
+2025-10-15	22:18:15	0cc00e11-e57d-419e-ad52-de102a00105a	SyntaxError: Unexpected non-whitespace character after JSON at position 23 (line 1 column 24)
+2025-10-15	22:18:34	90686033-8733-429e-96a8-42986fe15368	SyntaxError: Unexpected non-whitespace character after JSON at position 22 (line 1 column 23)
+2025-10-15	22:20:57	97ba48df-af75-41fd-bce4-536e2c3d66e5	TypeError: res.join is not a function
+2025-10-15	22:21:48	671ea526-1d52-4b73-906a-e9b088800eb9	TypeError: res.join is not a function
+2025-10-15	22:21:49	59bb0106-6d5a-43d4-abce-c7cbb6061d98	TypeError: res.join is not a function
+2025-10-15	22:22:43	12a81f74-cf58-44b2-b4aa-d8658e0acd8b	SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+2025-10-15	22:22:52	89038c04-e030-4532-86a9-04a0e58c52bc	TypeError: res.json(...).delete is not a function
