@@ -3,31 +3,13 @@ const app = express();
 const path = require('path');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
-
 const cors = require('cors');
+const corsOptions = require('./config/corsOptions');
 const PORT = process.env.PORT || 3000;
 
 // custom middleware
 app.use(logger);
 
-// cors - Cross Origin Resource Sharing
-const whiteList = [
-	'https://www.yoursite.com',
-	'http://127.0.0.1:5500',
-	'http://localhost:3000',
-];
-const corsOptions = {
-	// checks for the request origin
-	origin: (origin, callback) => {
-		// remove the !origin after development
-		if (whiteList.indexOf(origin) !== -1 || !origin) {
-			callback(null, true);
-		} else {
-			callback(new Error('not allowed by CORS'));
-		}
-	},
-	optionSuccessStatus: 200,
-};
 app.use(cors(corsOptions));
 
 // bulit -in middleware to handle urlencoded data
@@ -47,7 +29,6 @@ app.use((req, res, next) => {
 });
 
 app.use('/', require('./routes/root'));
-app.use('/subDir', require('./routes/subDir'));
 app.use('/employees', require('./routes/api/employees'));
 
 // for all req
