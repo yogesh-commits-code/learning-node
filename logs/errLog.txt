@@ -10,3 +10,17 @@
 2025-10-15	22:21:49	59bb0106-6d5a-43d4-abce-c7cbb6061d98	TypeError: res.join is not a function
 2025-10-15	22:22:43	12a81f74-cf58-44b2-b4aa-d8658e0acd8b	SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
 2025-10-15	22:22:52	89038c04-e030-4532-86a9-04a0e58c52bc	TypeError: res.json(...).delete is not a function
+2025-10-16	22:27:05	bc76cc9a-5a8e-4ac2-baf4-9d9551f182c3	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-16	22:27:19	9f707f0e-0ce8-4c97-ab43-bfb998c4e033	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-16	22:28:23	d750e615-7d43-4180-8736-6f7203eeb03f	TypeError: data.setEmployyes is not a function
+2025-10-16	22:29:21	3b1cc6e6-a88d-4128-b342-71e305e6d792	SyntaxError: Expected ',' or '}' after property value in JSON at position 14 (line 3 column 3)
+2025-10-16	22:30:38	91574585-b6b4-45a8-b82a-e92a3864bb07	SyntaxError: Expected ',' or '}' after property value in JSON at position 14 (line 3 column 3)
+2025-10-16	22:30:39	db257f6f-88be-4346-a1e1-d3b28895d417	SyntaxError: Expected ',' or '}' after property value in JSON at position 14 (line 3 column 3)
+2025-10-16	22:31:12	96617c4e-cd8e-40fe-9ac6-6dc7d0e14dd3	TypeError: data.setEmployyes is not a function
+2025-10-16	22:33:19	d273c708-6472-4e93-97af-0f0ec0305b95	SyntaxError: Expected ',' or '}' after property value in JSON at position 24 (line 3 column 14)
+2025-10-16	22:42:22	b977400f-84d4-495c-87d2-ffab2d1612c8	SyntaxError: Expected ',' or '}' after property value in JSON at position 24 (line 3 column 14)
+2025-10-16	22:42:26	f2462ee8-4a45-4de9-a62d-9785a5357780	SyntaxError: Expected ',' or '}' after property value in JSON at position 24 (line 3 column 14)
+2025-10-16	22:45:32	dab1adaf-fe53-404b-9021-c423f3d5c668	SyntaxError: Expected ',' or '}' after property value in JSON at position 24 (line 3 column 14)
+2025-10-16	22:49:26	b64f1d42-81cb-4375-894f-56841ab82ccb	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-16	22:49:28	5b56d9e9-3249-41e8-99c0-c07abc906bd6	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-16	22:51:43	c383ff9a-401f-4323-91d5-98858d1fc30c	TypeError: Cannot read properties of undefined (reading 'firstname')
