@@ -5,6 +5,7 @@ const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
+const verifyJWT = require('./middleware/verifyJWT');
 const PORT = process.env.PORT || 3000;
 
 // custom middleware
@@ -32,6 +33,7 @@ app.use((req, res, next) => {
 app.use('/', require('./routes/root'));
 app.use('/', require('./routes/register'));
 app.use('/', require('./routes/auth'));
+app.use(verifyJWT);
 app.use('/employees', require('./routes/api/employees'));
 
 // for all req
