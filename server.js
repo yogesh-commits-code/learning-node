@@ -28,7 +28,10 @@ app.use((req, res, next) => {
 	next();
 });
 
+// routes
 app.use('/', require('./routes/root'));
+app.use('/', require('./routes/register'));
+app.use('/', require('./routes/auth'));
 app.use('/employees', require('./routes/api/employees'));
 
 // for all req
