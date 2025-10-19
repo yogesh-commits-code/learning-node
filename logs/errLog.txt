@@ -30,3 +30,4 @@
 2025-10-18	17:21:10	251bb764-5be7-438e-a534-c13293300b2c	Error: secretOrPrivateKey must have a value
 2025-10-18	17:33:02	af3d4d0a-09da-48be-970c-b2ba4ad47009	Error: secretOrPrivateKey must have a value
 2025-10-18	17:36:37	9b88f102-d184-428c-a0b4-cb075f76fd9b	Error: secretOrPrivateKey must have a value
+2025-10-19	20:53:46	e8f782c8-980c-4c46-a7f0-b73ad57c36c9	Error: Cannot set headers after they are sent to the client

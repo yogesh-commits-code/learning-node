@@ -6,20 +6,30 @@ const errorHandler = require('./middleware/errorHandler');
 const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const verifyJWT = require('./middleware/verifyJWT');
+const cookieParser = require('cookie-parser');
+const credentials = require('./middleware/credentials');
 const PORT = process.env.PORT || 3000;
 
 // custom middleware
 app.use(logger);
 
+// Handle options credentials check - before CORS!
+// and fetch cookies credentials requirement
+app.use(credentials);
+
+// Cross Origin Resource Sharing
 app.use(cors(corsOptions));
 
-// bulit -in middleware to handle urlencoded data
+// built -in middleware to handle urlencoded data
 // in other words, form data:
 // 'content-type : application/x-www-form-urlencoded'
 app.use(express.urlencoded({ extended: false }));
 
-// bulit-in middleware for json
+// built-in middleware for json
 app.use(express.json());
+
+// cookie middleware
+app.use(cookieParser());
 
 // serve static file
 app.use(express.static(path.join(__dirname, '/public')));
@@ -31,8 +41,12 @@ app.use((req, res, next) => {
 
 // routes
 app.use('/', require('./routes/root'));
-app.use('/', require('./routes/register'));
-app.use('/', require('./routes/auth'));
+app.use('/register', require('./routes/register'));
+app.use('/auth', require('./routes/auth'));
+app.use('/refresh', require('./routes/refresh'));
+app.use('/logout', require('./routes/logout'));
+
+// verify JWT
 app.use(verifyJWT);
 app.use('/employees', require('./routes/api/employees'));
 
