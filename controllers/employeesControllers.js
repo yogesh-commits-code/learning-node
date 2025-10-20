@@ -5,11 +5,14 @@ const data = {
 	},
 };
 
+const fsPromises = require('fs').promises;
+const path = require('path');
+
 const getAllEmployees = (req, res) => {
 	res.json(data.employees);
 };
 
-const createEmployee = (req, res) => {
+const createEmployee = async (req, res) => {
 	const newEmployee = {
 		id: data.employees[data.employees.length - 1].id + 1 || 1,
 		firstname: req.body.firstname,
@@ -23,6 +26,10 @@ const createEmployee = (req, res) => {
 	}
 
 	data.setEmployees([...data.employees, newEmployee]);
+	await fsPromises.writeFile(
+		path.join(__dirname, '..', 'model', 'employees.json'),
+		JSON.stringify(data.employees)
+	);
 	res.status(201).json(data.employees);
 };
 
@@ -49,20 +56,18 @@ const updateEmployee = (req, res) => {
 };
 
 const deleteEmployee = (req, res) => {
-	const employee = data.employees.find(
-		(emp) => emp.id === parseInt(req.body.id)
-	);
+	const id = parseInt(req.body.id) || parseInt(req.params.id);
+	const employee = data.employees.find((emp) => emp.id === id);
 	if (!employee) {
-		return res
-			.status(400)
-			.json({ message: `Employee ID ${req.body.id} not found` });
+		return res.status(400).json({
+			message: `Employee ID ${req.body.id} not found (fill the body content you fool !!)`,
+		});
 	}
 
 	if (req.body.firstname) employee.firstname = req.body.firstname;
 	if (req.body.lastname) employee.lastname = req.body.lastname;
-	const filteredArray = data.employees.filter(
-		(emp) => emp.id !== parseInt(req.body.id)
-	);
+
+	const filteredArray = data.employees.filter((emp) => emp.id !== id);
 	data.setEmployees([...filteredArray]);
 	res.json(data.employees);
 };

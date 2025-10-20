@@ -12,7 +12,7 @@
 2025-10-15	22:22:52	89038c04-e030-4532-86a9-04a0e58c52bc	TypeError: res.json(...).delete is not a function
 2025-10-16	22:27:05	bc76cc9a-5a8e-4ac2-baf4-9d9551f182c3	TypeError: Cannot read properties of undefined (reading 'id')
 2025-10-16	22:27:19	9f707f0e-0ce8-4c97-ab43-bfb998c4e033	TypeError: Cannot read properties of undefined (reading 'id')
-2025-10-16	22:28:23	d750e615-7d43-4180-8736-6f7203eeb03f	TypeError: data.setEmployyes is not a function
+2025-10-16	22:28:23	d750e615-7d43-4180-8736-6f7203eeb03f	TypeError: data.setemployees is not a function
 2025-10-16	22:29:21	3b1cc6e6-a88d-4128-b342-71e305e6d792	SyntaxError: Expected ',' or '}' after property value in JSON at position 14 (line 3 column 3)
 2025-10-16	22:30:38	91574585-b6b4-45a8-b82a-e92a3864bb07	SyntaxError: Expected ',' or '}' after property value in JSON at position 14 (line 3 column 3)
 2025-10-16	22:30:39	db257f6f-88be-4346-a1e1-d3b28895d417	SyntaxError: Expected ',' or '}' after property value in JSON at position 14 (line 3 column 3)
@@ -31,3 +31,28 @@
 2025-10-18	17:33:02	af3d4d0a-09da-48be-970c-b2ba4ad47009	Error: secretOrPrivateKey must have a value
 2025-10-18	17:36:37	9b88f102-d184-428c-a0b4-cb075f76fd9b	Error: secretOrPrivateKey must have a value
 2025-10-19	20:53:46	e8f782c8-980c-4c46-a7f0-b73ad57c36c9	Error: Cannot set headers after they are sent to the client
+2025-10-20	22:29:40	bddfbdd5-101d-414a-b28d-34f62a127544	ReferenceError: origin is not defined
+2025-10-20	22:39:02	6bd1e769-621b-432c-a5cb-1b369033ce2d	TypeError: Cannot read properties of undefined (reading 'origin')
+2025-10-20	22:46:25	b3be07ce-d1bb-4557-9066-9aa443490ae0	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	22:47:16	ddbd9738-4b33-41c1-8c15-5c2202d3d1ba	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	22:47:46	7ecfbc54-7481-4bc1-b208-c922f9bb43ee	TypeError: Cannot read properties of undefined (reading 'firstname')
+2025-10-20	23:18:19	66147892-8628-47a3-8864-9f0eed2c0d19	TypeError: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Object
+2025-10-20	23:33:34	bb80c52c-6920-4c14-97e0-aa3a31cd9965	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	23:34:10	9df7a416-1071-4992-83f1-1c82ef8d0a6f	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	23:35:12	38dda65d-2975-4061-977e-9d9823ce1bca	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	23:36:21	f9452c7b-0f34-4b23-aac3-5adc73d61b3a	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	23:43:19	f5030721-41f8-4705-9613-a0753a24f09e	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	23:43:31	23ef2290-aa32-48cf-b03d-688905994990	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	23:45:31	f22446ac-01a0-450a-9b35-a2816bfa2b05	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	23:50:28	99a9dc2c-6a5a-463b-91fd-440b5086901b	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	23:55:14	174a4d85-f588-4076-ac54-b37fcd5cfd88	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	23:55:16	da90957c-06be-4815-87ea-d20434cd4551	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	23:57:54	5a801794-7809-479d-b817-6b4d4b9480f9	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-20	23:57:58	dbc3099e-0f36-406e-910e-2c3cfd0df429	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-21	00:00:31	21772f80-8e03-4311-a971-885b6b1b322e	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-21	00:00:38	b67fe727-bbd0-4237-9955-26f1aed5f7ae	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-21	00:05:23	f233df8e-6d63-475a-8184-7b5299d74f18	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-21	00:05:24	15035a62-2bd2-4557-8c35-0483689c8182	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-21	00:10:04	57e84689-b501-4dd1-a335-f84a81801a9d	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-21	00:13:08	48dfbd22-0066-4420-a9d5-3b4100a67bba	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-21	00:13:14	bc4deda6-4894-4fd2-b8ef-1dcd3e1fbfc5	TypeError: Cannot read properties of undefined (reading 'id')
