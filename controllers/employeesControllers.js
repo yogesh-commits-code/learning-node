@@ -1,86 +1,70 @@
-const data = {
-	employees: require('../model/employees.json'),
-	setEmployees: function (data) {
-		this.employees = data;
-	},
-};
+const Employee = require('../model/Employee');
 
-const fsPromises = require('fs').promises;
-const path = require('path');
-
-const getAllEmployees = (req, res) => {
-	res.json(data.employees);
+const getAllEmployees = async (req, res) => {
+	const employees = await Employee.find();
+	if (!employees) {
+		return res.status(204).json({ message: 'No employees found' });
+	}
+	res.json(employees);
 };
 
 const createEmployee = async (req, res) => {
-	const newEmployee = {
-		id: data.employees[data.employees.length - 1].id + 1 || 1,
-		firstname: req.body.firstname,
-		lastname: req.body.lastname,
-	};
-
-	if (!newEmployee.firstname || !newEmployee.lastname) {
+	if (!req?.body?.firstname || !req?.body?.lastname) {
 		return res
 			.status(400)
-			.json({ message: 'First and Last names are different.' });
+			.json({ message: 'First and Last names are required' });
 	}
 
-	data.setEmployees([...data.employees, newEmployee]);
-	await fsPromises.writeFile(
-		path.join(__dirname, '..', 'model', 'employees.json'),
-		JSON.stringify(data.employees)
-	);
-	res.status(201).json(data.employees);
-};
-
-const updateEmployee = (req, res) => {
-	const employee = data.employees.find(
-		(emp) => emp.id === parseInt(req.body.id)
-	);
-	if (!employee) {
-		return res
-			.status(400)
-			.json({ message: `Employee ID ${req.body.id} not found` });
-	}
-
-	if (req.body.firstname) employee.firstname = req.body.firstname;
-	if (req.body.lastname) employee.lastname = req.body.lastname;
-	const filteredArray = data.employees.filter(
-		(emp) => emp.id !== parseInt(req.body.id)
-	);
-	const unsortedArray = [...filteredArray, employee];
-	data.setEmployees(
-		unsortedArray.sort((a, b) => (a.id > b.id ? 1 : a.id < b.id ? -1 : 0))
-	);
-	res.json(data.employees);
-};
-
-const deleteEmployee = (req, res) => {
-	const id = parseInt(req.body.id) || parseInt(req.params.id);
-	const employee = data.employees.find((emp) => emp.id === id);
-	if (!employee) {
-		return res.status(400).json({
-			message: `Employee ID ${req.body.id} not found (fill the body content you fool !!)`,
+	try {
+		const result = await Employee.create({
+			firstname: req.body.firstname,
+			lastname: req.body.lastname,
 		});
+		console.log(result);
+		res.status(201).json({ message: 'Employee created !!' });
+	} catch (err) {
+		console.error(err);
 	}
-
-	if (req.body.firstname) employee.firstname = req.body.firstname;
-	if (req.body.lastname) employee.lastname = req.body.lastname;
-
-	const filteredArray = data.employees.filter((emp) => emp.id !== id);
-	data.setEmployees([...filteredArray]);
-	res.json(data.employees);
 };
 
-const getEmployee = (req, res) => {
-	const employee = data.employees.find(
-		(emp) => emp.id === parseInt(req.params.id)
-	);
+const updateEmployee = async (req, res) => {
+	if (!req?.body?.id) {
+		return res.status(400).json({ message: 'ID parameter is required.' });
+	}
+	const employee = await Employee.findOne({ _id: req.body.id }).exec();
 	if (!employee) {
 		return res
-			.status(400)
-			.json({ message: `Employee ID ${req.params.id} not found` });
+			.status(204)
+			.json({ message: `No Employee matches ID ${req.body.id}` });
 	}
+
+	if (req.body?.firstname) employee.firstname = req.body.firstname;
+	if (req.body?.lastname) employee.lastname = req.body.lastname;
+
+	const result = await employee.save();
+	res.console.log(result);
+};
+
+const deleteEmployee = async (req, res) => {
+	if (!req?.body?.id) {
+		return res.status(400).json({ message: 'Employee ID required' });
+	}
+	const employee = await Employee.findOne({ _id: req.body.id }).exec();
+	if (!employee) {
+		return res
+			.status(204)
+			.json({ message: 'No employee matches ID: ' + req.body.id });
+	}
+	const result = await employee.deleteOne({ _id: req.body.id });
+	console.log(result);
+	res.json(result);
+};
+
+const getEmployee = async (req, res) => {
+	if (!req?.params?.id) {
+		return res.status(400).json({ message: 'Employee ID required' });
+	}
+	const employee = await Employee.findOne({ _id: req.params.id }).exec();
 
 	res.json(employee);
 };

@@ -56,3 +56,14 @@
 2025-10-21	00:10:04	57e84689-b501-4dd1-a335-f84a81801a9d	TypeError: Cannot read properties of undefined (reading 'id')
 2025-10-21	00:13:08	48dfbd22-0066-4420-a9d5-3b4100a67bba	TypeError: Cannot read properties of undefined (reading 'id')
 2025-10-21	00:13:14	bc4deda6-4894-4fd2-b8ef-1dcd3e1fbfc5	TypeError: Cannot read properties of undefined (reading 'id')
+2025-10-23	21:11:54	b5715712-1815-4421-9df8-c72375feaccf	Error: data and hash arguments required
+2025-10-23	21:12:49	af8ed927-d5d6-4871-a168-732d6a07181c	Error: data and hash arguments required
+2025-10-23	21:12:54	9aa765b4-c10a-4f37-a34f-4c5222e041f1	Error: data and hash arguments required
+2025-10-23	21:19:43	b67e07ee-74db-46a7-8f6e-a44ca17a2c6b	Error: data and hash arguments required
+2025-10-23	21:21:19	d257c47d-3055-4012-a6b2-6e214b62c43a	Error: data and hash arguments required
+2025-10-23	21:29:25	1935496c-0acb-4cee-ae32-5f7fe27d600d	Error: Cannot set headers after they are sent to the client
+2025-10-23	21:29:58	97331080-e94f-4901-bf12-e84bb2424fa3	Error: Cannot set headers after they are sent to the client
+2025-10-23	21:30:33	e9c981c4-854c-4d5c-8809-36ac207561fe	Error: Cannot set headers after they are sent to the client
+2025-10-23	21:30:50	aca7ae57-311a-4491-9e9b-e3c168f3c101	Error: Cannot set headers after they are sent to the client
+2025-10-23	21:31:13	493ba44e-c5ef-4b51-8f2d-ec25747b4c67	Error: Cannot set headers after they are sent to the client
+2025-10-23	21:31:34	32080c9c-71f3-4fe3-ae51-ce632b6293cd	Error: Cannot set headers after they are sent to the client
